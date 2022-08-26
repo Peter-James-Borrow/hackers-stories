@@ -1,17 +1,15 @@
 import Item from "./Item"
 
 
-const List = (props) => {
- 
-  return (
-    <div>
+const List = ({ list }) =>  (
+    
     <ul>
-      {props.list.map((item) =>(
-        <Item key={item.objectID} item={item} /> 
+      { list.map((item) =>(
+        <Item key={item.objectID} {...item} />
       ))}
     </ul>
-    </div>
+    
   )
-}
+
 
 export default List
